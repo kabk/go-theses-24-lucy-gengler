@@ -5,7 +5,7 @@ $(document).ready(function () {
         { background: '#EEEEEE', text: '#ff73d4' },
         { background: '#ffffff', text: '#347e1e' },
         { background: '#ff7300', text: '#ffffff' },
-        { background: '#1F0606', text: '#E30000' },
+        { background: '#ffffff', text: '#5e3812' },
         { background: '#fde9d9', text: '#ff6c00' },
         { background: '#d9f2e3', text: '#00ff00' }
         // Add more chapters as needed
@@ -31,8 +31,10 @@ $(document).ready(function () {
             var chapterHeight = $(element).outerHeight();
 
             if (scrollPosition >= chapterPosition && scrollPosition < chapterPosition + chapterHeight) {
-                $('body, h1, h2, h3, p, figcaption, .bfgrdbfgd').css({
+                $('body').css({
                     'background-color': chapterColors[index].background,
+                });
+                $('body, h1, h2, h3, p, figcaption, li, nav ').css({
                     'color': chapterColors[index].text
                 });
 
@@ -57,8 +59,11 @@ $(document).ready(function () {
 
         if (scrollPosition === 0 || scrollPosition < 50) {
             $('nav').css('color', originalNavColor);
-            $('body, h1, h2, h3, p, figcaption').css({
+            $('body').css({
                 'background-color': originalBackgroundColor,
+            });
+
+            $('body, h1, h2, h3, p, li, nav figcaption').css({
                 'color': originalTextColor
             });
 

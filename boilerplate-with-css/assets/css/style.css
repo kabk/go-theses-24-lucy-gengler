@@ -101,6 +101,7 @@ body {
   width:100%;
   height:auto;
   overflow-y:auto;
+  overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
  
   
@@ -109,13 +110,14 @@ body {
 
 
 a {
-  color: var(--color-text-link);
+  color: #6b97e9;
   text-align: center;
 }
 
 a:hover {
-  color: var(--color-text-link-hover);
+  color: #ff73d4;
   text-decoration: underline;
+
 }
 
 .content-container {
@@ -181,11 +183,14 @@ a:hover {
 
 /* CSS styles for bibliography references */
 .bibliography {
+  position: relative;
   text-decoration: none; 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 70%;
   color: #5e3812;
   font-weight: bolder;
+  padding-left: 0.2rem;
+  bottom:0.4rem;
 }
 
 
@@ -209,13 +214,22 @@ a:hover {
 #bibliography-container {
   margin-top: 20px; 
   font-family:Arial, Helvetica, sans-serif;
-  font-size: 50%;
+  font-size: 30%;
   text-decoration: none !important;
   list-style-type: none !important;
-  padding-left: 0;
   text-align: left;
+  line-height:1.2;
+}
+
+.p2 {
+  margin-top: 20px; 
   color: #5e3812;
-  line-height:190%;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 30%;
+  text-decoration: none !important;
+  list-style-type: none !important;
+  text-align: left;
+  line-height:1.2;
 }
 
 #bibliography-container ul {
@@ -261,7 +275,12 @@ a:hover {
     margin-inline: auto;
 }
 
-
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.5rem;
+  color: #5e3812;
+  width: 100%;
+}
 
 
 h1{
@@ -314,6 +333,12 @@ h4{
   transition: background-color 0.3s ease, color 0.3s ease;
   background-color:transparent;
   text-align: center;
+
+}
+
+h5{
+font-family: Tagettes;
+font-size: 1rem;
 
 }
 
@@ -430,7 +455,7 @@ main{
   color: white;
   text-align: center;
   /* padding: 50px; */
-
+display:block;
   padding: 1rem;
 }
 
@@ -460,10 +485,11 @@ background: none !important;;
 }
 
 img {
-  display: block; /* Ensure the image is treated as a block element */
+  display:block;
   margin: 0 auto; /* Center the image horizontally */
-  max-width: 24ch; /* Set the maximum width of the image */
+  max-width: 100%; /* Set the maximum width of the image */
   height: auto; /* Maintain the aspect ratio */
+  text-align: center;
 }
 
 
@@ -476,7 +502,7 @@ figcaption.image-caption{
   text-align: center;
   /* margin-left: 420px;
   margin-right: 420px; */
-  color: sandybrown;
+  padding: 0.5rem;
 
   text-wrap: balance;
 
@@ -546,35 +572,73 @@ figcaption.image-caption{
 }
 
 @media (max-width: 779px) {
+
+  body {
+    overflow-x: hidden !important; /* Prevent horizontal scrolling */
+  }
+
   nav {
     position: fixed;
-    top: 0; left: 0;
+    top: 1; left: 0;
     padding-top: 3rem;
     margin: 0;
     width: 200px;
     height: 100vh;
-    transition: translate .25s;
-    translate: -100% 0;
+    transition: transform .25s, background-color 0.3s ease, color 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 2000;
+    background-color: transparent !important;
+    background-image: linear-gradient(var(--background-color), transparent);
   }
+  
   nav.opened {
-    translate: 0 0;
+    transform: translateX(0);
+    position: sticky;
+    top: 0;
   }
-
+  
   #menuToggle {
     position: fixed;
-    top: 1rem; left: 1rem;
-    display: block;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    display: flex;
+    z-index: 2000;
+    background-color: transparent !important;
+    background-image: linear-gradient(var(--background-color), transparent);
   }
 
+
+  img {
+    position: relative;
+    width: 100%;
+    padding: 3vw;
+    grid-area: 0.5rem;
+  }
 
   .footnote-content {
 display:block;
-float: none;
-width: 100%;
+position:relative;
+width: 70vw;
+margin-left:0;
+margin-top:1rem;
 font-size: clamp(0.8rem, 1vw,2vw);
 line-height: clamp (1.1rem, 1.5vw, 1.3rem);
 
   }
+
+
+  @media (max-width: 600px){
+
+  
+  .footnote-inside {
+      position: relative;
+      width: 70vw;
+      margin-left: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      height: auto;
+  }
+
 }
 
 
@@ -649,3 +713,6 @@ line-height: clamp (1.1rem, 1.5vw, 1.3rem);
   .image-column {
     flex: 1; /* Take full width on small screens */
   }
+
+
+}
