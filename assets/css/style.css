@@ -97,7 +97,7 @@ body {
   position:relative;
   background-color: #E4E4E4; 
   font: var(--font-size) var(--font-family);
-  color: white;
+color:white;
   width:100%;
   height:auto;
   overflow-y:auto;
@@ -106,17 +106,28 @@ body {
  
   
 }
+.fade-out {
+  /* Define initial opacity */
+  opacity: 1; /* Set to 1 for full opacity */
+  /* Add transition for smooth fading */
+  transition: opacity 0.5s ease;
+}
 
 
+.fade-out.fade {
+  /* Adjust opacity for fading out */
+  opacity: 0; /* Set to 0 for full transparency */
+}
 
 a {
-  color: #6b97e9;
+  color:white;
   text-align: center;
 }
 
 a:hover {
-  color: #ff73d4;
-  text-decoration: underline;
+
+  
+  text-decoration: none;
 
 }
 
@@ -129,23 +140,42 @@ a:hover {
   text-decoration: none; /* Remove underline */
   cursor: pointer; /* Change cursor to indicate interactivity */
   opacity: 100%;
+
 }
 
 /* Style for footnote content */
 .footnote-content {
-  margin-top: 10px; /* Add spacing above the footnote content */
+  margin-top: 5px; /* Add spacing above the footnote content */
   padding: 5px; 
-  position:absolute;
+  color: #825435 !important;
+font-family: Arial, Helvetica, sans-serif;
+display:block;
+  position: relative; 
   float: right;
+  width: 100%;
+  max-width: none; 
+  padding: 5px; /* Add padding */
+  border: 1.5px solid; /* Add border for clarity */
+  box-sizing: border-box;
+  border-radius: 5px; 
+  font-size: clamp(0.5rem, 0.200vw + 0.5rem, 1rem);
+  line-height: clamp(0.5rem, 0.462vw + 0.63rem, 0.8rem);
+}
+
+  /*position:absolute;
+  float: right;
+  clear:right;
   background-color: transparent;
   width:calc(100vw - 40rem);
   left:75%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.5rem;
+  line-height: 1.2;
   width: 10rem;
   cursor: pointer;
   border: var(--color-text);
-}
+
+}*/
 
 /*
 .footnotes{
@@ -171,8 +201,9 @@ a:hover {
 */
 
 .footnote-ref:hover {
-  opacity: 50%;
+
   text-decoration: none;
+  color: #825435 !important;
 }
 
 /* Style for footnote content */
@@ -184,24 +215,34 @@ a:hover {
 /* CSS styles for bibliography references */
 .bibliography {
   position: relative;
+ 
   text-decoration: none; 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 70%;
-  color: #5e3812;
   font-weight: bolder;
-  padding-left: 0.2rem;
+  padding-left: 0.1rem;
   bottom:0.4rem;
 }
 
 
 
-.bibliography-ref :hover {
-  text-decoration: none;
-  opacity: 50%;
+.bibliography :hover {
+
+  color: #825435 !important;
 }
 
-.bibliography a:hover {
-  text-decoration: none !important; 
+#bibliography-container a {
+
+overflow-wrap: break-word;
+word-wrap: break-word;
+color: #ff73d4 !important;
+opacity:100%;
+
+word-break: break-word;
+}
+.bibliography-ref a:hover {
+  z-index:3000;
+  opacity: 50%;
 }
 
 .reference-content {
@@ -213,17 +254,19 @@ a:hover {
 /* Styling for the container of the bibliography references at the bottom */
 #bibliography-container {
   margin-top: 20px; 
+  z-index:3000;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 30%;
   text-decoration: none !important;
   list-style-type: none !important;
   text-align: left;
+ 
   line-height:1.2;
 }
 
 .p2 {
   margin-top: 20px; 
-  color: #5e3812;
+  color: #825435 !important;
   font-family:Arial, Helvetica, sans-serif;
   font-size: 30%;
   text-decoration: none !important;
@@ -234,7 +277,6 @@ a:hover {
 
 #bibliography-container ul {
   list-style-type: none !important;
-  padding-left: 20; /* Optional: to remove default left padding */
   font-size: 2ch;
 }
 
@@ -276,17 +318,20 @@ a:hover {
 }
 
 footer {
+  margin-top: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.5rem;
-  color: #5e3812;
+  color: white;
   width: 100%;
+  text-align: left;
+  font-style:normal;
 }
 
 
 h1{
   font-family: Tagettes;
   text-align: center;
-  font-size: min(10vw,7.5rem);
+  font-size: min(13vw,7.5rem);
   line-height: 1.5;
   color:  var(--color-text);
   /* margin: -10px; */
@@ -298,23 +343,39 @@ h1{
 }
 
 h2 {
+
   --background-color: transparent;
-
+  font-size: min(86px, 10vw);
   position: sticky;
-  top: 0; /* Stick to the top of the container */
+  top: 0;
   font-family: Tagettes;
+  transition: background-image 0.3s ease, color 0.3s ease, background-color 0.3s ease; /* Combine all transitions */
+  background-color: transparent !important;
+  /*background-image: linear-gradient(var(--background-color), transparent);*/
+  z-index: 1000;
+ 
   transition: color 0.5s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  background-color:transparent !important;
 
-  background-image: linear-gradient(var(--background-color), transparent);
-  
-  z-index: 1000; /* Ensure it appears above other content */
+  transition: background-image 0.3s ease, color 0.3s ease;
+
+
+
+
 }
+
+
 
 .container {
   height: 100vh; /* Set a fixed height for the container */
   overflow: auto; /* Allow scrolling within the container */
+}
+
+.container p {
+  transition: opacity 0.3s ease;
+}
+
+.container > :not(h2) {
+  transition: opacity 0.3s ease; /* Add a transition for opacity */
 }
 
 
@@ -342,6 +403,11 @@ font-size: 1rem;
 
 }
 
+h6{
+  font-family: Tagettes;
+  font-size: 2rem;
+}
+
 p {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -354,6 +420,13 @@ p {
   line-height: 1.5;
   transition: background-color 0.3s ease, color 0.3s ease;
   background:transparent;
+  }
+
+  p::first-letter {
+    font-family: Tagettes;
+    font-size: 100%; /* Adjust the font size as needed */
+    float: left; /* Optional: Use float to wrap text around the first letter */
+    margin-right: 0px; /* Optional: Add margin to separate the first letter from the rest of the text */
   }
 
   
@@ -395,21 +468,25 @@ nav.table-of-contents {
   font-family: Arial;
   font-size: 45%;
   top: 0;
-  z-index: 2000; /* Ensure it appears on top of other elements */
+  z-index: 0; /* Ensure it appears on top of other elements */
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
   transition: position 0.3s ease;
-  color:white;
+
+  line-height: 1;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav.table-of-contents.sticky {
   position: fixed; /* Make it fixed when sticky */
   left: 0;
+  top: 8rem;
   font-size: 45%;
   padding: 1rem;
+  z-index:0;
   transition: background-color 0.3s ease, color 0.3s ease;
+ 
 
 }
 
@@ -419,11 +496,16 @@ nav.table-of-contents.sticky {
   
 }
 
+
+
+
+
+
 /* Display the subchapters when hovering over the main chapters */
 .table-of-contents li:hover .subchapters {
   display: block;
   opacity: 50%;
-  line-height: 0.4;
+  line-height: 0.2;
   margin-top: 1%;
   transition: background-color 0.3s ease, color 0.3s ease;
   text-indent: 1.5%;
@@ -435,24 +517,25 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  z-index:1;
 }
 
 nav ul li {
-  margin-bottom: 20px; /* Add margin between list items */
+  margin-bottom: 15px; /* Add margin between list items */
   color:white;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a {
   text-decoration: none;
-  color: #ffffff; /* Adjust the text color as needed */
-  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 0.2;
+ /* Adjust the text color as needed */
 }
 
 /* content */
 
 main{
-  color: white;
+
   text-align: center;
   /* padding: 50px; */
 display:block;
@@ -460,6 +543,18 @@ display:block;
 }
 
 
+
+.illustration {
+  float:left;
+  width: 5rem; /* Width of your illustration */
+  text-align: left;/* Align the illustration in the center */
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+  text-align: left;
+}
 
 summary{
   
@@ -477,9 +572,10 @@ margin-right: 500px;
 
 #subtitle {
 text-align: center;
-font-size: 20px;
+font-size: 1ch;
 transition: color 0.5s ease;
 font-family: Cambo;
+font-weight: normal;
 background: none !important;;
 
 }
@@ -489,6 +585,11 @@ img {
   margin: 0 auto; /* Center the image horizontally */
   max-width: 100%; /* Set the maximum width of the image */
   height: auto; /* Maintain the aspect ratio */
+  text-align: center;
+}
+
+figure {
+  margin: 0; /* Remove any margins */
   text-align: center;
 }
 
@@ -518,16 +619,25 @@ figcaption.image-caption{
 }
 
 
-#menuToggle {
-  font-size: 24px; /* Adjust the font size as needed */
-  /* position: fixed; */
-  top: 20px;
-  /* right: 20px; */
-  cursor: pointer;
-  display: none; /* Initially hide the X */
+
+.last {
+  margin-top: 10rem; /* Add spacing above the acknowledges section */
 }
 
+.acknowledges {
+  padding-right: 5rem;
+  font-style: normal;
+}
 
+.acknowledges p {
+  margin: 0; /* Remove default paragraph margin */
+  font-size: 16px; /* Set the font size */
+  line-height: 1,1; /* Set the line height */
+  font-family: Cambo;
+  font-style: normal;
+  text-align: left;
+  
+}
 
 
 
@@ -535,6 +645,8 @@ figcaption.image-caption{
 
   font-size: 10px;;
 }
+
+
 
 
 
@@ -553,6 +665,9 @@ figcaption.image-caption{
   display: none;
 }
 
+.hidden {
+  display: none;
+}
 
 
 
@@ -565,79 +680,126 @@ figcaption.image-caption{
 #menuToggle {
   font-size: 24px; /* Adjust the font size as needed */
   /* position: fixed; */
-  top: 20px;
+  bottom:0;
+  left:15px;
   /* right: 20px; */
   cursor: pointer;
   display: none; /* Initially hide the X */
+
+
+ 
 }
 
+#backToTopBtn {
+  display: none; /* Hide the button by default */
+}
+
+/* Adjust the table of contents for smaller screens */
 @media (max-width: 779px) {
 
-  body {
-    overflow-x: hidden !important; /* Prevent horizontal scrolling */
+  #backToTopBtn {
+    position: fixed;
+    display: block;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    font-family: tagettes;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+
+  
+  nav.table-of-contents {
+      position: sticky; /* Change to sticky */
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      z-index: 100; /* Adjust as needed */
+      background-color: transparent;
+      color: white; /* Example text color */
+      transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  nav {
-    position: fixed;
-    top: 1; left: 0;
-    padding-top: 3rem;
-    margin: 0;
-    width: 200px;
-    height: 100vh;
-    transition: transform .25s, background-color 0.3s ease, color 0.3s ease;
-    transform: translateX(-100%);
-    z-index: 2000;
-    background-color: transparent !important;
-    background-image: linear-gradient(var(--background-color), transparent);
+  nav.table-of-contents.sticky {
+      position: relative; /* Change to relative */
+      top: auto;
+      background-color: transparent; /* Example background color */
+      color: transparent; /* Example text color */
   }
-  
-  nav.opened {
-    transform: translateX(0);
-    position: sticky;
-    top: 0;
+
+  .subchapters {
+      display: none;
+      line-height: 2;
+
+        top: 0; /* Align it with the top of the table of contents */
+      
   }
-  
-  #menuToggle {
-    position: fixed;
-    bottom: 0.5rem;
-    left: 0.5rem;
-    display: flex;
-    z-index: 2000;
-    background-color: transparent !important;
-    background-image: linear-gradient(var(--background-color), transparent);
+
+
+
+  /* Display the subchapters when hovering over the main chapters */
+  .table-of-contents li:hover .subchapters {
+      display: block;
+      opacity: 70%;
+      line-height: 0.2;
+      margin-top: 1%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-indent: 1.5%;
   }
+
+  nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+  }
+
+  nav ul li {
+      margin-bottom: 20px; /* Add margin between list items */
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav a {
+      text-decoration: none;
+      line-height: 0.2;
+      color: white; /* Adjust the text color as needed */
+  }
+
 
 
   img {
     position: relative;
     width: 100%;
-    padding: 3vw;
     grid-area: 0.5rem;
   }
 
   .footnote-content {
-display:block;
-position:relative;
-width: 70vw;
-margin-left:0;
-margin-top:1rem;
-font-size: clamp(0.8rem, 1vw,2vw);
-line-height: clamp (1.1rem, 1.5vw, 1.3rem);
-
+    display:block; 
+    position:relative;
+    float: none; 
+    width: 100%;
+    max-width: 100%;
+    padding: 5px; 
+    border: 1.5px solid; 
+    box-sizing: border-box;
+    border-radius: 5px; 
+    font-size: clamp(0.5rem, 0.200vw + 0.5rem, 1rem);
+    line-height: clamp(0.5rem, 0.462vw + 0.63rem, 0.8rem);
   }
+}
+
+
 
 
   @media (max-width: 600px){
 
   
-  .footnote-inside {
-      position: relative;
-      width: 70vw;
-      margin-left: 0;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      height: auto;
-  }
+
 
 }
 
@@ -714,5 +876,3 @@ line-height: clamp (1.1rem, 1.5vw, 1.3rem);
     flex: 1; /* Take full width on small screens */
   }
 
-
-}

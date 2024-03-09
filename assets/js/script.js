@@ -1,12 +1,12 @@
 $(document).ready(function () {
     var chapterColors = [
         { background: '#ffffff', text: '#b17c2b' },
-        { background: '#6b97e9', text: '#ffffff' },
+        { background: '#B0C2E1', text: '#ffffff' },
         { background: '#EEEEEE', text: '#ff73d4' },
         { background: '#ffffff', text: '#347e1e' },
-        { background: '#ff7300', text: '#ffffff' },
-        { background: '#ffffff', text: '#5e3812' },
         { background: '#fde9d9', text: '#ff6c00' },
+        { background: '#ffffff', text: '#825435' },
+        { background: '#E4E4E4', text:'#ffffff' },
         { background: '#d9f2e3', text: '#00ff00' }
         // Add more chapters as needed
     ];
@@ -14,6 +14,7 @@ $(document).ready(function () {
     var originalNavColor = $('nav').css('color');
     var originalBackgroundColor = $('body').css('background-color');
     var originalTextColor = $('body').css('color');
+    var backToTopBtn = $('#backToTopBtn');
 
  
 
@@ -34,7 +35,7 @@ $(document).ready(function () {
                 $('body').css({
                     'background-color': chapterColors[index].background,
                 });
-                $('body, h1, h2, h3, p, figcaption, li, nav ').css({
+                $('body, h1, h2, h3, p, button, figcaption, li, a, nav a').css({
                     'color': chapterColors[index].text
                 });
 
@@ -46,8 +47,7 @@ $(document).ready(function () {
                 $('nav').css('color', chapterColors[index].text);
 
                 $('nav a').css({
-                    'color': chapterColors[index].text,
-                    'background-color': chapterColors[index].background
+                    'color': chapterColors[index].text
                 });
 
                 // Update footnote color
@@ -63,19 +63,19 @@ $(document).ready(function () {
                 'background-color': originalBackgroundColor,
             });
 
-            $('body, h1, h2, h3, p, li, nav figcaption').css({
+            $('body, h1, h2, h3, p, button, li, nav, a, figcaption').css({
                 'color': originalTextColor
             });
 
             $('nav a').css({
-                'color': originalNavColor,
-                'background-color': 'transparent'
+                'color': originalNavColor
             });
 
             // Update footnote color
             updateFootnoteColor(originalTextColor);
         }
     });
+
 
    
     var toc = $("nav.table-of-contents");
@@ -159,15 +159,71 @@ $(document).ready(function() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.getElementById('menuToggle');
+  const backToTopBtn = document.getElementById('backToTopBtn');
   const nav = document.querySelector('nav');
 
-  menuToggle.addEventListener('click', function () {
+  backToTopBtn.addEventListener('click', function () {
     nav.classList.toggle( 'opened' );
     //nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
   });
 });
 
 
+   // Toggle star symbol visibility when menu is clicked
+   menuToggle.on('click', function () {
+    $(this).toggleClass('hidden');
+});
 
 
+
+
+
+
+
+function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+  
+
+  $(window).scroll(function () {
+    var scrollPosition = $(window).scrollTop();
+
+    $('.chapter-section').each(function (index, element) {
+        var chapterPosition = $(element).offset().top;
+        var chapterHeight = $(element).outerHeight();
+
+        if (scrollPosition >= chapterPosition && scrollPosition < chapterPosition + chapterHeight) {
+            // Update button color
+            $('.back-to-top-button').css('color', chapterColors[index].text);
+            return false;
+        }
+    });
+});
+
+
+// Function to update the color of figcaptions
+function updateFigcaptionColor(color) {
+    $('figcaption').css('color', color); // Update figcaption color
+}
+
+
+
+$(window).scroll(function() {
+    // Get the scroll position
+    var scrollPosition = $(window).scrollTop();
+    
+    // Get the position of the "Thanks..." chapter
+    var thanksPosition = $('.chapter-section:last').offset().top;
+  
+    // If the scroll position is beyond the "Thanks..." chapter
+    if (scrollPosition >= thanksPosition) {
+      // Remove the sticky class from the table of contents
+      $('nav.table-of-contents').removeClass('sticky');
+    } else {
+      // Add the sticky class to the table of contents
+      $('nav.table-of-contents').addClass('sticky');
+    }
+  });

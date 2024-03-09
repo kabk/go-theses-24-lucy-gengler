@@ -7,16 +7,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
+
 	<!-- meta tags, fill them with website meta infos -->
 	<meta name="description" content="Description of your web page" />
 	<meta name="keywords" content="Keyword 1, Keyword 2, Keyword 3, Keyword 4, Keyword 5 ..." />
 	<meta name="author" content="Name of the author/owner of the webpage's content" />
 
 	<!-- favicon, fill with a 512x512px .png image named 'favicon.png' -->
-	<link rel="icon" href="assets/images/favicon/favicon_03.png" />
+	<link rel="icon" href="assets/images/favicon/favicon_pink.png" />
 
 	<!-- website title, visible in the browser window and on link sharing -->
-	<title>Website title</title>
+	<title>Treasures of Care</title>
 
 	<!-- links for extensions and dependencies and fonts -->
 	<link href="https://db.onlinewebfonts.com/c/1d090a5cff3beb6b5872a42004c92ada?family=AUTHENTIC+Sans+Condensed+150"
@@ -34,6 +35,7 @@
 	<!-- your function scripts -->
 	<script type="text/javascript" src="assets/js/script.js?ver=1.0"></script>
 
+
 </head>
 
 <body>
@@ -45,23 +47,20 @@
 		<header>
 
 			<h1 id="changingText">Treasures of Care</h1>
-			<p id="subtitle"> An exploration of the significance of nurturing in our historical context, contemporary
-				society, and day-to-day existence. </p>
-
-
-
+			<h6 id="subtitle"> An exploration of the significance of nurturing</h6>
 
 			<nav class="table-of-contents">
-				<div class=“menu-icon” onclick="toggleMenu()">
-					<div class=“bar”></div>
-					<div class=“bar”></div>
-					<div class=“bar”></div>
+				<div class="menu-icon" onclick="toggleMenu()">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
 				</div>
+
 
 				<ul>
 					<li><a href="#intro">Introduction</a></li>
 					<li>
-						<a href="#chapter-1">Chapter 1 – The Roots</a>
+						<a href="#chapter-1">1 –The Roots</a>
 						<ul class="subchapters">
 							<li><a href="#subchapter-1.1">1.1 The 'Housewife'</a></li>
 							<li><a href="#subchapter-1.2">1.2 Labour of Love</a></li>
@@ -69,28 +68,30 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#chapter-2">Chapter 2 – The Branches</a>
+						<a href="#chapter-2">2 – The Branches</a>
 						<ul class="subchapters">
 							<li><a href="#subchapter-2.1">2.1 Love, Letters and Gifts</a></li>
 							<li><a href="#subchapter-2.2">2.2 Nurturing</a></li>
 						</ul>
 					</li>
-
 					<li>
-					<li><a href="#chapter-3">Chapter 3 – The Compost</a></li>
-					<ul class="subchapters">
-						<li><a href="#subchapter-3.1">3.1 Hidden Gardens</a></li>
-						<li><a href="#subchapter-3.2">3.2 A Recipe Book</a></li>
-					</ul>
+						<a href="#chapter-3">3 – The Compost</a>
+						<ul class="subchapters">
+							<li><a href="#subchapter-3.1">3.1 Hidden Gardens</a></li>
+							<li><a href="#subchapter-3.2">3.2 A Recipe Book</a></li>
+						</ul>
 					</li>
-
-					<li>
 					<li><a href="#epilogue">Conclusion</a></li>
-					</li>
+					<li><a href="#bibliography">Bibliography</a></li>
 				</ul>
 			</nav>
 
-			<p id="menuToggle" class="hidden-on-large">★</p>
+
+			<!-- 
+			<p id="menuToggle" class="hidden-on-large">★</p>-->
+
+			<button id="backToTopBtn" onclick="scrollToTop()" class="back-to-top-button">↑</button>
+
 
 		</header>
 
@@ -98,14 +99,14 @@
 
 
 
-		<main>
+		<main class="reduced-opacity">
 
 			<div class="content-container">
 				<div class="text-column">
 					<div class="chapter">
 						<h2>Abstract</h2>
 
-						<p>
+						<p >
 							When everything is changing constantly, moving at lightning speed, there is often no time
 							and energy to care for others. It’s more convenient to send an SMS than a letter to someone.
 							And as we have isolated ourselves, our trust in strangers has shifted, care and intimacy
@@ -137,12 +138,15 @@
 
 						</p>
 
+				
+
 					</div>
 					<div class="chapter">
 						<div id="intro" class="chapter-section">
 							<h2>Introduction</h2>
 
-							<p> Going home to visit my grandparents is exciting, not only because I get to see them, but
+							<p> Going home to visit my grandparents is exciting, not only because I get
+								to see them, but
 								also because I get to visit my grandfather’s garden – a magical place filled with plants
 								and
 								flowers. This place has always been more than just a plot of land, it’s grows with time
@@ -162,7 +166,7 @@
 									</a>
 								</div>
 								<figcaption class="image-caption">
-									My Grandfather in his Garden, June 2022
+									<b>Fig. 1</b> My Grandfather in his Garden, June 2022
 
 								</figcaption>
 							</figure>
@@ -182,8 +186,7 @@
 								<span id="footnote1" class="footnote-content" style="display: none;">
 									<sup>⋆.ೃ࿔*:･</sup> One of the most widely consumed wild mushrooms that grows during
 									autumn
-									mostly in North America and Europe and is known for its rich earthy and nutty flavor
-									(22).
+									mostly in North America and Europe and is known for its rich earthy and nutty flavor.
 								</span>
 								and soon our basket was filled with them, creating an unspoken sense of bliss. Despite
 								being
@@ -198,7 +201,7 @@
 									</a>
 								</div>
 								<figcaption class="image-caption">
-									While gathering mushrooms, we stumbled upon a beautiful coral-fungus (lat.:
+									<b>Fig. 2</b> While gathering mushrooms, we stumbled upon a beautiful coral-fungus (lat.:
 									Artomyces pyxidatus).
 									This fungi thrives during the summer months on decaying logs and branches. However,
 									the increasing use of dead wood for heating is putting its natural habitat at risk,
@@ -213,7 +216,7 @@
 								extend beyond social circles, to strangers. An example is the study “You Turn Me Cold”,
 								where researchers invited healthy individuals to watch videos of strangers putting their
 								hands into iced water.<a id="bibref-1" href="#reference1" class="bibliography"
-									data-bibliography-id="reference1"><sup>[1]</sup> </a>
+									data-bibliography-id="reference1">[1] </a>
 								In response to these images, the temperature of the participant’s
 								own hands dropped. This phenomenon is called “temperature contagion”. It underlines the
 								idea
@@ -224,6 +227,16 @@
 								for
 								strangers and the potential for fostering a more connected society.
 							</p>
+
+
+							<figure>
+								<div class="illustration">
+									<a href="-" target="_blank" class="sticky-image">
+										<img src="assets/images/mushroom_illu.png" alt="mushroom" width="100%"
+											height="auto">
+									</a>
+								</div>
+							</figure>
 
 							<p>
 								Despite the power for connection, we might feel as if there is a loss in collectivity.
@@ -246,7 +259,7 @@
 								engage collective participation.
 							</p>
 
-							<p>
+							<p class="fade-out">
 								Charles Eisenstein (a degrowth activist<sup><a href="#" class="footnote-ref"
 										data-footnote-id="footnote2">ೄྀ࿐✦</a></sup>) illustrates this
 								<span id="footnote2" class="footnote-content" style="display: none;">
@@ -288,7 +301,7 @@
 									</a>
 								</div>
 								<figcaption class="image-caption">
-									Fig. 3 Captured by my father’s drone, this image shows my grandfather’s garden from
+									<b>Fig. 3</b> Captured by my father’s drone, this image shows my grandfather’s garden from
 									above.
 									My father loves to play around with ‘new’ gadgets, trying to impress my
 									grandparents.
@@ -341,11 +354,11 @@
 							<div class="image-wrapper">
 								<a href="https://archive.org/details/jeanne-dielman-23-quai-du-commerce-1080-bruxelles-akerman"
 									target="_blank">
-									<img src="assets/images/Jeanne-Dielman.png" alt="Jeanne Dielman">
+									<img src="assets/images/Jeanne-Dielman_blue.png" alt="Jeanne Dielman">
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								Still from the film: Jeanne Dielman: 23, Quai Du Commerce, 1080 Bruxelles by Chantal
+								<b>Fig. 4</b> Still from the film: Jeanne Dielman: 23, Quai Du Commerce, 1080 Bruxelles by Chantal
 								Akerman.
 							</figcaption>
 						</figure>
@@ -373,11 +386,11 @@
 							<div class="image-wrapper">
 								<a href="https://www.plutobooks.com/blog/wages-housework-campaign-history/"
 									target="_blank">
-									<img src="assets/images/wages_for_housework.png" alt="A Wages for Housework march">
+									<img src="assets/images/wages_for_housework_blue.png" alt="A Wages for Housework march">
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								A Wages for Housework march in 1977. Photograph by Bettye Lane.
+								<b>Fig. 5</b> A Wages for Housework march in 1977. Photograph by Bettye Lane.
 							</figcaption>
 						</figure>
 
@@ -400,11 +413,11 @@
 						<figure>
 							<div class="image-wrapper">
 								<a href="https://casco.art/resource/unlearningexercises/" target="_blank">
-									<img src="assets/images/casco.png" alt="Casco Art Institute">
+									<img src="assets/images/casco_blue.png" alt="Casco Art Institute">
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								Casco Art Institute, Unlearning Exercise 3: Cleaning Together
+								<b>Fig. 6</b> Casco Art Institute, Unlearning Exercise 3: Cleaning Together
 							</figcaption>
 						</figure>
 
@@ -474,12 +487,12 @@
 						<figure>
 							<div class="image-wrapper">
 								<a href="https://www.imdb.com/title/tt23640230/" target="_blank" class="sticky-image">
-									<img src="assets/images/sauna.png" alt="Smoke Sauna Sisterhood" width="100%"
+									<img src="assets/images/smoke_sauna_blue.png" alt="Smoke Sauna Sisterhood" width="100%"
 										height="auto">
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								Still from Smoke Sauna Sisterhood. A film by Anna Hints.
+								<b>Fig. 7</b> Still from Smoke Sauna Sisterhood. A film by Anna Hints.
 							</figcaption>
 						</figure>
 
@@ -539,7 +552,7 @@
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								Fig. 8 Letter from my grandmother after I moved to the Netherlands, 2020.
+								<b>Fig. 8</b> Letter from my grandmother after I moved to the Netherlands, 2020.
 							</figcaption>
 						</figure>
 
@@ -603,6 +616,18 @@
 							unexpected discoveries.
 						</p>
 
+						<figure>
+							<div class="image-wrapper">
+								<a href="assets/images/letter_tram.png" target="_blank" class="sticky-image">
+									<img src="assets/images/letter_tram.png" alt="Letter Tram"
+										width="100%" height="auto">
+								</a>
+							</div>
+							<figcaption class="image-caption">
+								<b>Fig. 9</b> Envelope with a question in the tram, 2024.
+							</figcaption>
+						</figure>
+
 						<h3 id="subchapter-2.2">Nurturing</h3>
 
 						<p>
@@ -652,7 +677,7 @@
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								Fig. 10 Chef Rush in the Kitchen.
+								<b>Fig. 10</b>  Chef Rush in the Kitchen.
 							</figcaption>
 						</figure>
 
@@ -664,7 +689,7 @@
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								Fig. 11 The family eating the dinner cooked by Chef Rush.
+								<b>Fig. 11</b>  The family eating the dinner cooked by Chef Rush.
 							</figcaption>
 						</figure>
 
@@ -785,7 +810,7 @@
 								</a>
 							</div>
 							<figcaption class="image-caption">
-								Fig. 11 Scan from a recipe contribution in my recipe book.
+								<b>Fig. 12</b>  Scan from a recipe contribution in my recipe book.
 							</figcaption>
 						</figure>
 
@@ -1186,38 +1211,65 @@
 								</li>
 
 							</ul>
+						</div>
+					</div>
 
-							<br>
+							
+
+						
+
+							<div class="chapter-section">
+
+								<h2>Thanks...</h2>
 
 
-							<div class="last">
+						
 								<div class="acknowledges">
 									<p>
-										Hey Martino 
+										I would like to express my gratitude to those who have supported me throughout
+										this journey. First and foremost, my deepest appreciation goes to my supervisor,
+										Dirk Vis, for his patience and insightful feedback.
+										A special mention goes to my coding tutors, Thomas Buxo and François
+										Girard-Meunier. Thank you for guiding me in the right direction. I would also
+										like to thank Pascal de Man, for additional assistance in shaping the website. I
+										am extremely grateful for my peers and friends, whose encouragement motivated me
+										during challenging times. In particular, I want to thank Maya Kurella for her
+										valuable feedback and proofreading. Thank you, Martin Gobert and Toni Klimsza,
+										for all the engaging discussions that enriched my writing.
+										Finally, I extend my deepest thanks to my family for their support and
+										encouragement. To my parents, grandparents, and my sister thank you for always
+										standing by my side.
+
 									</p>
 								</div>
-							</div>
+						
 
-							<div class="footer">
+						
+
+							
 								<footer>
 									<b>Name</b><br>
-									Lucy Gengler<br>
+									Lucy Gengler<br><br>
 									<b>Education</b><br>
 									B.A. Graphic Design<br>
-									Royal Academy of Art – The Hague<br>
+									Royal Academy of Art – The Hague<br><br>
 									<b>Supervisor</b><br>
-									Dirk Vis<br>
-									<b>Website support</b><br>
+									Dirk Vis<br><br>
+									<b>Website Support</b><br>
 									François Girard-Meunier<br>
 									Thomas Buxo <br>
-									Pascal de Man <br>
+									Pascal de Man <br><br>
+									<b>Typefaces</b><br>
+									Arial <br>
+									Cambo <br>
+									Tagettes <br><br>
 									<b>Date</b><br>
-									February, 2024<br>
+									February, 2024<br><br>
 								</footer>
-							</div>
+							
 
 
-
+						</div>
 
 
 
@@ -1247,6 +1299,9 @@
 
 
 	</div>
+
+
+
 
 
 </body>
