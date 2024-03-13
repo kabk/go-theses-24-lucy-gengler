@@ -453,12 +453,12 @@ div.page-wrapper {
 
 
 nav.table-of-contents {
-  position: relative;
+  position: sticky;
   font-family: Arial;
   font-size: 45%;
-  top: 0;
+  top: 8rem;
   z-index: 0; /* Ensure it appears on top of other elements */
-  width: 100%;
+  width:25vw;
   padding: 1rem;
   box-sizing: border-box;
   transition: position 0.3s ease;
@@ -468,9 +468,8 @@ nav.table-of-contents {
 }
 
 nav.table-of-contents.sticky {
-  position: fixed; /* Make it fixed when sticky */
-  left: 0;
-  top: 8rem;
+  /*position: fixed; Make it fixed when sticky */
+
   width:25vw;
   font-size: 45%;
   padding: 1rem;
