@@ -327,7 +327,7 @@ h1{
 h2 {
 
   --background-color: transparent;
-  font-size: min(72px, 9vw);
+  font-size: min(72px, 13vw);
   position: sticky;
   top: 0;
   font-family: Tagettes;
@@ -698,6 +698,12 @@ figcaption.image-caption{
     border: none;
     cursor: pointer;
     z-index: 1000;
+  }
+
+  h2{
+
+    font-weight: bold;
+    font-size: min(72px, 13vw);
   }
   
 
