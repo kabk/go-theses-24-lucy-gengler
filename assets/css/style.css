@@ -10,13 +10,7 @@
   to generate your own font for the web from .ttf or .oft files 
 */
 
-@font-face {
-    font-family: 'Amiamie';
-    src: url('../fonts/Amiamie/Amiamie.woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
+
 
 @font-face {
     font-family: 'Tagettes';
@@ -26,24 +20,7 @@
     font-display: block;
 }
 
-@font-face {
-  font-family: 'Mitre Square';
-  src: url('../fonts/Mitre_square/mitresqu_u-webfont.woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-
-
-@font-face {
-  font-family: 'Abhaya';
-  src: url('../fonts/Abhaya/abhayalibre-regular-webfont.woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
+/*
 
 @font-face {
   font-family: 'Cambo';
@@ -53,13 +30,18 @@
   font-display: block;
 }
 
-@font-face {
-  font-family: 'Literata';
-  src: url('../fonts/Literata/literata-variablefont_opszwght-demo.html');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
+.cambo-regular {
+  font-family: "Cambo", serif;
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display:block;
 }
+
+
+
 
 /* VARIABLES */
 
