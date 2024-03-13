@@ -126,7 +126,7 @@ a:hover {
 .footnote-content {
   margin-top: 5px; /* Add spacing above the footnote content */
   padding: 5px; 
-  color: #825435 !important;
+ opacity:50%;
 font-family: Arial, Helvetica, sans-serif;
 display:block;
   position: relative; 
@@ -182,7 +182,7 @@ display:block;
 .footnote-ref:hover {
 
   text-decoration: none;
-  color: #825435 !important;
+ opacity:50%;
 }
 
 /* Style for footnote content */
@@ -313,7 +313,7 @@ footer {
 h1{
   font-family: Tagettes;
   text-align: center;
-  font-size: min(13vw,7.5rem);
+  font-size: min(13vw,7.2rem);
   line-height: 1.5;
   color:  var(--color-text);
   /* margin: -10px; */
@@ -624,7 +624,7 @@ figcaption.image-caption{
   line-height: 1,1; /* Set the line height */
   font-family: Cambo;
   font-style: normal;
-  text-align: left;
+  text-align: center;
   
 }
 
@@ -706,6 +706,20 @@ figcaption.image-caption{
     font-size: min(72px, 13vw);
   }
   
+  h1{
+    font-family: Tagettes;
+    text-align: center;
+    font-size: min(13vw,5rem);
+    line-height: 1.5;
+    font-weight: bolder;
+    color:  var(--color-text);
+    /* margin: -10px; */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color:transparent;
+  
+        text-wrap: balance;
+    
+  }
 
   
   nav.table-of-contents {
@@ -723,6 +737,7 @@ figcaption.image-caption{
   nav.table-of-contents.sticky {
       position: relative; /* Change to relative */
       top: auto;
+      line-height:1;
       background-color: transparent; /* Example background color */
       color: transparent; /* Example text color */
   }
@@ -761,7 +776,8 @@ figcaption.image-caption{
 
   nav a {
       text-decoration: none;
-      line-height: 0.2;
+      line-height: 1;
+      font-size: 0.7rem;
       color: white; /* Adjust the text color as needed */
   }
 
