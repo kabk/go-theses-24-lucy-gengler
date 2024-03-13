@@ -457,6 +457,7 @@ nav.table-of-contents {
   font-family: Arial;
   font-size: 45%;
   top: 8rem;
+  margin-top: 10rem;
   z-index: 0; /* Ensure it appears on top of other elements */
   width:25vw;
   padding: 1rem;
