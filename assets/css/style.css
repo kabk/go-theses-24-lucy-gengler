@@ -703,12 +703,12 @@ figcaption.image-caption{
   h2{
 
     font-weight: bold;
-    font-size: min(72px, 13vw);
+    font-size: min(72px, 12vw);
   }
   
   h1{
     font-family: Tagettes;
-    text-align: center;
+    text-align: left;
     font-size: min(13vw,5rem);
     line-height: 1.5;
     font-weight: bolder;
