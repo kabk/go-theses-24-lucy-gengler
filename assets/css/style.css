@@ -341,7 +341,7 @@ h1{
 h2 {
 
   --background-color: transparent;
-  font-size: min(84px, 9vw);
+  font-size: min(72px, 9vw);
   position: sticky;
   top: 0;
   font-family: Tagettes;
