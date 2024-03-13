@@ -399,7 +399,7 @@ p {
   margin-right:18rem; */
   text-align: justify;
   text-justify: inter-character;
-  font-family: Literata;
+  font-family: "Cambo", serif;
   font-size: 0.8rem; 
   line-height: 1.5;
   transition: background-color 0.3s ease, color 0.3s ease;
