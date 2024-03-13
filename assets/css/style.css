@@ -208,7 +208,7 @@ display:block;
 /* CSS styles for bibliography references */
 .bibliography {
   position: relative;
- 
+ margin-left: 0;
   text-decoration: none; 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 70%;
@@ -216,7 +216,10 @@ display:block;
   padding-left: 0.1rem;
   bottom:0.4rem;
 }
-
+ul{
+  margin-left: 0;
+  padding-left: 0;
+}
 
 
 .bibliography :hover {
@@ -338,7 +341,7 @@ h1{
 h2 {
 
   --background-color: transparent;
-  font-size: min(86px, 10vw);
+  font-size: min(84px, 9vw);
   position: sticky;
   top: 0;
   font-family: Tagettes;
@@ -354,6 +357,12 @@ h2 {
 
 
 
+}
+
+.cambo-regular {
+  font-family: "Cambo", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
@@ -428,6 +437,7 @@ p {
  
 
 ol, ul{
+  margin-left:0;
   
 }
 
@@ -475,6 +485,7 @@ nav.table-of-contents.sticky {
   position: fixed; /* Make it fixed when sticky */
   left: 0;
   top: 8rem;
+  width:25vw;
   font-size: 45%;
   padding: 1rem;
   z-index:0;
@@ -485,10 +496,10 @@ nav.table-of-contents.sticky {
 
 .subchapters {
   display: none;
-  line-height: 2;
+  line-height: 4;
+
   
 }
-
 
 
 
@@ -514,15 +525,15 @@ nav ul {
 }
 
 nav ul li {
-  margin-bottom: 15px; /* Add margin between list items */
+  margin-bottom: 10px; /* Add margin between list items */
   color:white;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a {
   text-decoration: none;
-  line-height: 0.2;
- /* Adjust the text color as needed */
+  line-height: 0.8;
+ /* Adjust the text c1olor as needed */
 }
 
 /* content */
