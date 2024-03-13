@@ -20,7 +20,7 @@
     font-display: block;
 }
 
-
+/*
 
 @font-face {
   font-family: 'Cambo';
@@ -29,20 +29,20 @@
   font-style: normal;
   font-display: block;
 }
+*/
 
 
 
-/*
 
 @import url('https://fonts.googleapis.com/css2?family=Cambo&display=swap');
 .cambo-regular {
-  font-family: "Cambo", serif;
+  font-family: 'Cambo';
   font-weight: normal;
   font-style: normal;
   font-display:block;
 }
 
-*/
+
 
 
 
