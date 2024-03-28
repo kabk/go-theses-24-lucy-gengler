@@ -701,12 +701,42 @@ figcaption.image-caption{
     z-index: 1000;
   }
 
+  p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* margin-left: 18rem;
+    margin-right:18rem; */
+  
+    font-family: 'Cambo';
+    font-size: 0.6rem; 
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background:transparent;
+    }
+
+    figcaption.image-caption {
+      font-size: 10px;
+      font-family: Arial;
+      font-style: normal;
+      text-align: center;
+      padding: 0.5rem;
+      text-wrap: balance;
+  }
+  
+    p::first-letter {
+      font-family: Tagettes;
+      font-size: 100%; /* Adjust the font size as needed */
+     
+      margin-right: 0px; /* Optional: Add margin to separate the first letter from the rest of the text */
+    }
+
   h2{
 
     font-weight: bold;
     font-size: min(72px, 12vw);
   }
   
+  /*
   h1{
     font-family: Tagettes;
     text-align: center;
@@ -715,17 +745,17 @@ figcaption.image-caption{
     max-width:100%;
     font-weight:bolder;
     color:  var(--color-text);
-    /* margin: -10px; */
     transition: background-color 0.3s ease, color 0.3s ease;
     background-color:transparent;
   
         text-wrap: balance;
     
   }
+  */
 
   
   nav.table-of-contents {
-      position: sticky; /* Change to sticky */
+      position: relative; /* Change to sticky */
       top: 0;
       left: 0;
       width: 100%;
