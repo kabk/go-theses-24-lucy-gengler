@@ -736,11 +736,11 @@ figcaption.image-caption{
     font-size: min(72px, 12vw);
   }
   
-  /*
+  
   h1{
     font-family: Tagettes;
     text-align: center;
-    font-size: min(13vw,5rem);
+    font-size: min(11vw,5rem);
     line-height: 1.5;
     max-width:100%;
     font-weight:bolder;
@@ -751,7 +751,7 @@ figcaption.image-caption{
         text-wrap: balance;
     
   }
-  */
+  
 
   
   nav.table-of-contents {
