@@ -709,10 +709,10 @@ figcaption.image-caption{
   
   h1{
     font-family: Tagettes;
-    text-align: left;
+    text-align: center;
     font-size: min(13vw,5rem);
     line-height: 1.5;
-    font-weight: bolder;
+    font-weight:bolder;
     color:  var(--color-text);
     /* margin: -10px; */
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -724,7 +724,7 @@ figcaption.image-caption{
 
   
   nav.table-of-contents {
-      position: sticky; /* Change to sticky */
+      position: relative; /* Change to sticky */
       top: 0;
       left: 0;
       width: 100%;
