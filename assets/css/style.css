@@ -751,6 +751,19 @@ figcaption.image-caption{
         text-wrap: balance;
     
   }
+
+  .acknowledges p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1,1;
+    font-family: Cambo;
+    font-style: normal;
+    text-align: justify;
+}
+
+  .acknowledges {
+    padding-right: 0;
+}
   
 
   
