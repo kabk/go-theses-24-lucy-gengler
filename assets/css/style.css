@@ -408,12 +408,14 @@ p {
   line-height: 1.5;
   transition: background-color 0.3s ease, color 0.3s ease;
   background:transparent;
+  text-indent: 20px;
   }
 
   p::first-letter {
+    text-indent: 20px;
     font-family: Tagettes;
     font-size: 100%; /* Adjust the font size as needed */
-    float: left; /* Optional: Use float to wrap text around the first letter */
+    /* Optional: Use float to wrap text around the first letter */
     margin-right: 0px; /* Optional: Add margin to separate the first letter from the rest of the text */
   }
 
@@ -747,6 +749,7 @@ figcaption.image-caption{
     color:  var(--color-text);
     transition: background-color 0.3s ease, color 0.3s ease;
     background-color:transparent;
+  
   
         text-wrap: balance;
     
