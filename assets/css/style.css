@@ -712,6 +712,7 @@ figcaption.image-caption{
     text-align: center;
     font-size: min(13vw,5rem);
     line-height: 1.5;
+    max-width:100%;
     font-weight:bolder;
     color:  var(--color-text);
     /* margin: -10px; */
@@ -724,7 +725,7 @@ figcaption.image-caption{
 
   
   nav.table-of-contents {
-      position: relative; /* Change to sticky */
+      position: sticky; /* Change to sticky */
       top: 0;
       left: 0;
       width: 100%;
